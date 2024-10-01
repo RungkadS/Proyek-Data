@@ -7,18 +7,18 @@ from pyngrok import ngrok
 
 # Load Data
 dataframes = {
-    "Aotizhongxin": pd.read_csv("PRSA_Data_Aotizhongxin_20130301-20170228.csv"),
-    "Changping": pd.read_csv("PRSA_Data_Changping_20130301-20170228.csv"),
-    "Dingling": pd.read_csv("PRSA_Data_Dingling_20130301-20170228.csv"),
-    "Dongsi": pd.read_csv("PRSA_Data_Dongsi_20130301-20170228.csv"),
-    "Guanyuan": pd.read_csv("PRSA_Data_Guanyuan_20130301-20170228.csv"),
-    "Gucheng": pd.read_csv("PRSA_Data_Gucheng_20130301-20170228.csv"),
-    "Huairou": pd.read_csv("PRSA_Data_Huairou_20130301-20170228.csv"),
-    "Nongzhanguan": pd.read_csv("PRSA_Data_Nongzhanguan_20130301-20170228.csv"),
-    "Shunyi": pd.read_csv("PRSA_Data_Shunyi_20130301-20170228.csv"),
-    "Tiantan": pd.read_csv("PRSA_Data_Tiantan_20130301-20170228.csv"),
-    "Wanliu": pd.read_csv("PRSA_Data_Wanliu_20130301-20170228.csv"),
-    "Wanshouxigong": pd.read_csv("PRSA_Data_Wanshouxigong_20130301-20170228.csv"),
+    "Aotizhongxin": pd.read_csv("data/PRSA_Data_Aotizhongxin_20130301-20170228.csv"),
+    "Changping": pd.read_csv("data/PRSA_Data_Changping_20130301-20170228.csv"),
+    "Dingling": pd.read_csv("data/PRSA_Data_Dingling_20130301-20170228.csv"),
+    "Dongsi": pd.read_csv("data/PRSA_Data_Dongsi_20130301-20170228.csv"),
+    "Guanyuan": pd.read_csv("data/PRSA_Data_Guanyuan_20130301-20170228.csv"),
+    "Gucheng": pd.read_csv("data/PRSA_Data_Gucheng_20130301-20170228.csv"),
+    "Huairou": pd.read_csv("data/PRSA_Data_Huairou_20130301-20170228.csv"),
+    "Nongzhanguan": pd.read_csv("data/PRSA_Data_Nongzhanguan_20130301-20170228.csv"),
+    "Shunyi": pd.read_csv("data/PRSA_Data_Shunyi_20130301-20170228.csv"),
+    "Tiantan": pd.read_csv("data/PRSA_Data_Tiantan_20130301-20170228.csv"),
+    "Wanliu": pd.read_csv("data/PRSA_Data_Wanliu_20130301-20170228.csv"),
+    "Wanshouxigong": pd.read_csv("data/PRSA_Data_Wanshouxigong_20130301-20170228.csv"),
 }
 
 # Fungsi untuk menghitung AQI
