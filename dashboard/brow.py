@@ -120,9 +120,7 @@ color_mapping = {
     'Berbahaya': 'black'
 }
 
-st.subheader("Kategori AQI dan Warna")
-legend_labels = ['Baik', 'Sedang', 'Tidak sehat untuk orang sensitif', 'Tidak Sehat', 'Sangat Tidak Sehat', 'Berbahaya']
-legend_colors = ['green', 'yellow', 'orange', 'red', 'darkred', 'black']
+st.subheader("Kategori AQI")
 
 legend_patches = [mpatches.Patch(color=color, label=label) for label, color in color_mapping.items()]
 plt.legend(handles=legend_patches,
