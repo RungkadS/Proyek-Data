@@ -123,6 +123,10 @@ st.subheader("Kategori AQI dan Warna")
 legend_labels = ['Baik', 'Sedang', 'Tidak sehat untuk orang sensitif', 'Tidak Sehat', 'Sangat Tidak Sehat', 'Berbahaya']
 legend_colors = ['green', 'yellow', 'orange', 'red', 'darkred', 'black']
 
+legend_patches = [mpatches.Patch(color=color, label=label) for label, color in color_mapping.items()]
+plt.legend(handles=legend_patches,
+           bbox_to_anchor=(1.05, 1), loc='upper left', prop={'size': 8})
+
 colors = [color_mapping[kategori] for kategori in monthly_avg_pollutant['Kategori_AQI']]
 plt.figure(figsize=(10, 5))
 plt.bar(x=monthly_avg_pollutant['bulan'].astype(str), height=monthly_avg_pollutant['AQI'], width=0.5, color=colors)
