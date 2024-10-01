@@ -122,11 +122,10 @@ color_mapping = {
 
 st.subheader("Kategori AQI")
 
+colors = [color_mapping[kategori] for kategori in monthly_avg_pollutant['Kategori_AQI']]
 legend_patches = [mpatches.Patch(color=color, label=label) for label, color in color_mapping.items()]
 plt.legend(handles=legend_patches,
            bbox_to_anchor=(1.05, 1), loc='upper left', prop={'size': 8})
-
-colors = [color_mapping[kategori] for kategori in monthly_avg_pollutant['Kategori_AQI']]
 plt.figure(figsize=(10, 5))
 plt.bar(x=monthly_avg_pollutant['bulan'].astype(str), height=monthly_avg_pollutant['AQI'], width=0.5, color=colors)
 plt.xlabel("Bulan")
