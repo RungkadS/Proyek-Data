@@ -120,19 +120,19 @@ color_mapping = {
     'Berbahaya': 'black'
 }
 
-st.subheader("Kategori AQI")
-
 colors = [color_mapping[kategori] for kategori in monthly_avg_pollutant['Kategori_AQI']]
 legend_patches = [mpatches.Patch(color=color, label=label) for label, color in color_mapping.items()]
-plt.legend(handles=legend_patches,
-           bbox_to_anchor=(1.05, 1), loc='upper left', prop={'size': 8})
-plt.figure(figsize=(10, 5))
-plt.bar(x=monthly_avg_pollutant['bulan'].astype(str), height=monthly_avg_pollutant['AQI'], width=0.5, color=colors)
-plt.xlabel("Bulan")
-plt.ylabel("AQI")
-plt.title(f"Grafik AQI Bulanan di {selected_location}")
-plt.xticks(rotation=45)
+
+# Plot
+fig, ax = plt.subplots(figsize=(10, 5))
+ax.bar(x=monthly_avg_pollutant['bulan'].astype(str), height=monthly_avg_pollutant['AQI'], color=colors, width=0.5)
+ax.set_xlabel("Bulan")
+ax.set_ylabel("AQI")
+ax.set_title(f"Grafik AQI Bulanan di {selected_location}")
+ax.set_xticklabels(monthly_avg_pollutant['bulan'].astype(str), rotation=45)
+
+ax.legend(handles=legend_patches, bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
+
 plt.tight_layout()
 
-# Tampilkan plot AQI di Streamlit
-st.pyplot(plt)
+st.pyplot(fig)
