@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from pyngrok import ngrok
+import matplotlib.patches as mpatches
 
 # Load Data
 dataframes = {
