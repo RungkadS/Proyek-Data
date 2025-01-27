@@ -1,4 +1,4 @@
-# Dashboard Data Suhu dan Kualitas Udara Sekitar Beijing
+# Beijing Air Quality and Temperature Data Dashboard
 
 ## Set Environment - Anaconda/Miniconda
 ```
